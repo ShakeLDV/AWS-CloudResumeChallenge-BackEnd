@@ -1,4 +1,3 @@
-#Find a way to allow the lambda to access DynamoDB
 resource "aws_iam_role" "iam_for_lambda" {
   name = "iam_for_lambda"
 

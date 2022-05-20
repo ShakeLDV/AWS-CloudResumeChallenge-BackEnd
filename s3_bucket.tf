@@ -23,12 +23,3 @@ resource "aws_s3_bucket_website_configuration" "website_bucket_configuration" {
         key = "error.html"
     }
 }
-
-# This was suppose to upload the website into the S3 bucket after it is made. I think we can use GitHub Actions to do that for us.
-# resource "aws_s3_object" "uploadwebsite" {
-#     bucket = aws_s3_bucket.website_bucket.id
-#     for_each = fileset(path.module, "website/*")
-#     key = each.value
-#     source = "website/${each.value}"
-#     etag = filemd5("website/${each.value}")
-# }
